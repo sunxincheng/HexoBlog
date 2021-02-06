@@ -99,7 +99,7 @@ menu:
   archives: /archives/ || archive
   schedule: /schedule/ || calendar
   sitemap: /sitemap.xml || sitemap
-  commonweal: /404/ || heartbeat
+  #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -111,10 +111,10 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -140,7 +140,7 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
+  icons_only: true
   transition: false
 
 # Blog rolls
@@ -159,21 +159,20 @@ links_layout: block
 # Table Of Contents in the Sidebar
 toc:
   enable: true
-
   # Automatically add list number to toc.
   number: true
-
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
-
+  # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front Matter.
+  max_depth: 6
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 #creative_commons: by-nc-sa
 #creative_commons:
 
+# Sidebar Position, available value: left | right (only for Pisces | Gemini).
 sidebar:
-  # Sidebar Position, available value: left | right (only for Pisces | Gemini).
   position: left
   #position: right
 
@@ -199,7 +198,13 @@ sidebar:
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
-
+# Hexo博客NexT主题美化之显示当前浏览进度
+back2top:
+  enable: true
+  # Back to top in sidebar.
+  sidebar: false
+  # Scroll percent label in b2t button.
+  scrollpercent: true
 # ---------------------------------------------------------------
 # Post Settings
 # ---------------------------------------------------------------
@@ -216,7 +221,7 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Post meta display settings
@@ -226,6 +231,28 @@ post_meta:
   updated_at: false
   categories: true
 
+symbols_count_time:
+  separated_meta: true
+  #文章中的显示是否显示文字（本文字数|阅读时长）
+  item_text_post: true
+  #网页底部的显示是否显示文字（站点总字数|站点阅读时长）
+  item_text_total: false
+  # Average Word Length (chars count in word)
+  awl: 4
+  # Words Per Minute
+  wpm: 275
+
+codeblock:
+  # Manual define the border radius in codeblock
+  # Leave it empty for the default 1
+  border_radius: 5
+  # Add copy button on codeblock
+  copy_button:
+    enable: true  #是否添加复制按钮
+    # Show text copy result
+    show_result: true  #是否显示文本复制结果
+    # Style: only 'flat' is currently available, leave it blank if you prefer default theme
+    style:
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
